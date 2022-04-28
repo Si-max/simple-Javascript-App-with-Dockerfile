@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: simaxsimplejavascriptappwithdockerfile 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simaxsimplejavascriptappwithdockerfile
+  template:
+    metadata:
+      labels:
+        app: simaxsimplejavascriptappwithdockerfile 
+    spec:
+      containers:
+        - name: simaxsimplejavascriptappwithdockerfile 
+          image: jelly22fish.azurecr.io/simaxsimplejavascriptappwithdockerfile
+          ports:
+          - containerPort: 8080
